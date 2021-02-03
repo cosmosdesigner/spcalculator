@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/cosmosdesigner/spcalculator/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/cosmosdesigner/spcalculator/static/js/main.8d19fa3d.chunk.js",
+    "main.js.map": "/cosmosdesigner/spcalculator/static/js/main.8d19fa3d.chunk.js.map",
+    "runtime-main.js": "/cosmosdesigner/spcalculator/static/js/runtime-main.9beaf45d.js",
+    "runtime-main.js.map": "/cosmosdesigner/spcalculator/static/js/runtime-main.9beaf45d.js.map",
+    "static/js/2.b0de8045.chunk.js": "/cosmosdesigner/spcalculator/static/js/2.b0de8045.chunk.js",
+    "static/js/2.b0de8045.chunk.js.map": "/cosmosdesigner/spcalculator/static/js/2.b0de8045.chunk.js.map",
+    "static/js/3.3531330d.chunk.js": "/cosmosdesigner/spcalculator/static/js/3.3531330d.chunk.js",
+    "static/js/3.3531330d.chunk.js.map": "/cosmosdesigner/spcalculator/static/js/3.3531330d.chunk.js.map",
+    "index.html": "/cosmosdesigner/spcalculator/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/cosmosdesigner/spcalculator/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.b0de8045.chunk.js.LICENSE.txt": "/cosmosdesigner/spcalculator/static/js/2.b0de8045.chunk.js.LICENSE.txt",
+    "static/media/logo.6ce24c58.svg": "/cosmosdesigner/spcalculator/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9beaf45d.js",
+    "static/js/2.b0de8045.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.8d19fa3d.chunk.js"
+  ]
+}
