@@ -1,11 +1,25 @@
 
 import './App.css';
 import { useState } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Slider from '@material-ui/core/Slider';
+
+import './style/main.css'
 
 function App() {
   const percentageWeight = 0.33;
   const [value, setValue] = useState({ 'tempo': 0, 'complexidade': 0, 'risco': 0 });
   var sumOfAllFactors = 0;
+
+  function valuetext(value) {
+    return `${value}`;
+  }
+
+  function handleChange(e) {
+    setValue({ ...value, [e.target.ariaLabel]: e.target.ariaValueText })
+    
+  }
 
 
   function handleSum() {
@@ -24,28 +38,55 @@ function App() {
 
 
   return (
-    <div>
+    <div className='container'>
       <h1>Story points Calculator</h1>
       <p>Os story points são medidas de esforço, baseadas em 3 pilares,<br /> <b>Tempo</b>, <b>Complexidade</b> e <b>Risco/Incerteza</b></p>
       <br />
-      <form>
-        <label>
-          Tempo
-          <input name='tempo' type="text" value={value.tempo.toString()} onChange={(e) => setValue({ ...value, [e.target.name]: e.target.value !== '' ? parseInt(e.target.value) : parseInt(0) })} />
-        </label><br /> <br />
-        <label>
-          Complexidade
-          <input name='complexidade' type="text" value={value.complexidade.toString()} onChange={(e) => setValue({ ...value, [e.target.name]: e.target.value !== '' ? parseInt(e.target.value) : parseInt(0) })} />
-        </label>
-        <br /> <br />
-        <label>
-          Risco / Incerteza
-          <input name='risco' type="text" value={value.risco.toString()} onChange={(e) => setValue({ ...value, [e.target.name]: e.target.value !== '' ? parseInt(e.target.value) : parseInt(0) })} />
-        </label>
-      </form>
-      <p>{handleSum()}</p>
+      <Typography gutterBottom>
+        Tempo
+      </Typography>
+      <Slider
+        aria-label='tempo'
+        defaultValue={0}
+        getAriaValueText={valuetext}
+        onChange={handleChange}
+        step={1}
+        marks
+        min={0}
+        max={10}
+        valueLabelDisplay="auto"
+      />
+      <Typography gutterBottom>
+        Complexidade
+      </Typography>
+      <Slider
+        aria-label='complexidade'
+        defaultValue={0}
+        getAriaValueText={valuetext}
+        onChange={handleChange}
+        step={1}
+        marks
+        min={0}
+        max={10}
+        valueLabelDisplay="auto"
+      />
+      <Typography gutterBottom>
+        Risco / Incerteza
+      </Typography>
+      <Slider
+        aria-label='risco'
+        defaultValue={0}
+        getAriaValueText={valuetext}
+        onChange={handleChange}
+        step={1}
+        marks
+        min={0}
+        max={10}
+        valueLabelDisplay="auto"
+      />
+      <p>Story Points: <b className="spValue">{handleSum()}</b></p>
     </div>
   );
 }
-
+ 
 export default App;
