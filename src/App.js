@@ -41,6 +41,7 @@ function App() {
     <div className='container'>
       <h1>Story points Calculator</h1>
       <p>Os story points são medidas de esforço, baseadas em 3 pilares,<br /> <b>Tempo</b>, <b>Complexidade</b> e <b>Risco/Incerteza</b></p>
+      <p>Cada pilar esta dividido de 0 a 10, desliza até ao valor que achas que será a tua User Story, e terás a estimativa da tua US</p>
       <br />
       <Typography gutterBottom>
         Tempo
@@ -84,7 +85,9 @@ function App() {
         max={10}
         valueLabelDisplay="auto"
       />
+      <br />
       <p>Story Points: <b className="spValue">{handleSum()}</b></p>
+      <small>Cada pilar tem o mesmo valor e estamos a limitar as estimativas até 21, com a regra de Fibonacci</small>
     </div>
   );
 }
